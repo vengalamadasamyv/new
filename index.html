@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Spark</title>
+  <link rel="stylesheet" href="./asset/style/index.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+   <style>
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .scene {
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .card {
+      width: 100%;
+      height: 200px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.7s ease;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Flip only when hovered */
+    .scene:hover .card {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .card-front {
+      background: #fff;
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .card-back {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: #fff;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .card-back h2 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo"><img src="./asset/logo-bg.png"></div>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Service</a>
+      <a href="#">Project</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="menu-toggle" id="menu-toggle" onclick="dre()">
+      <img src="./asset/bar.png" width="40px" id="demo">
+    </div>
+  </header>
+  <script>
+    var d = document.getElementById('demo');
+    var y = 2;
+    function dre(){
+      if(y % 2 == 0){
+      d.src = 'https://img.icons8.com/?size=100&id=16248&format=png&color=ffffff';
+      }else{
+        d.src= './asset/bar.png';
+      }
+      y++;
+    }
+  </script>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h5 class="tag">Spark Your Brand To Life</h5>
+      <h1>Social Spark: Where Ideas Come Alive</h1>
+      <p>We are Social Spark, a digital marketing agency helping businesses grow online with SEO, social media, and creative campaigns that boost visibility, drive traffic, and engage audiences for measurable results.</p>
+      <div class="stats-container">
+  <p class="stats-text show">82.7% Lower Cost Per Result</p>
+</div>
+<div>
+      <button class="btn">LET’S TALK <span><img src="https://img.icons8.com/?size=100&id=UxJUwU0HpHV6&format=png&color=ffffff" width="15px"></span></button>
+      <!-- <button class="btn">Call Us <span>→</span></button> -->
+
+</div>
+    </div>
+    <div class="hero-image">
+      <div class="image-wrapper">
+        <img src="./asset/home.gif" alt="Laptop">
+      </div>
+    </div>
+  </section>
+
+  <div class="scroll-down"><img src="https://img.icons8.com/?size=100&id=v3qknsUBIY6Q&format=png&color=000000" class="animate__animated animate__bounce animate__infinite animate__slower" width="20px"><br><span>Scroll Down</span></div>
+
+
+
+<section class="services">
+
+  <div class="service-header">
+    <h1>Our services that we provide</h1>
+    <p>We offer a complete range of digital marketing solutions designed to grow your brand, attract quality leads, and boost your online presence.</p>
+  </div>
+
+  <div class="service-cards">
+    <div class="card-s">
+      <img src="https://img.icons8.com/?size=100&id=MyMfHTtLiihw&format=png&color=000000" alt="Design Icon">
+      <h3>Lead Generation</h3>
+      <p>Attract. Engage. Convert.
+Social Spark helps you get quality leads that drive real results.</p>
+    </div>
+    <div class="card-s">
+      <img src="https://img.icons8.com/?size=100&id=vnfJFAFmuPbW&format=png&color=000000" alt="Development Icon">
+      <h3>Brand Awareness</h3>
+      <p>Brand awareness starts with the right audience.
+We ensure your name stays top of mind, every time.</p>
+    </div>
+    <div class="card-s">
+      <img src="https://img.icons8.com/?size=100&id=HshIQgiZ35nI&format=png&color=000000" alt="Marketing Icon">
+      <h3>Content Creation & Personal Branding</h3>
+      <p>We craft creative content that builds trust and boosts brand visibility.</p>
+    </div>
+  </div>
+</section>
+
+<!-- our works -->
+
+<section class="our-works">
+  <div class="works-header">
+    <span class="tag">See Our Results</span>
+    <h2>Showcasing the Spark Behind Every Successful Campaign</h2>
+    <p>At Social Spark, we craft data-driven lead generation campaigns that deliver measurable results. From startups to established brands, our work showcases creativity, strategy, and proven success across industries.</p>
+  </div>
+
+  <div class="works-grid">
+
+    <!-- CARD 1 -->
+    <div class="scene" onclick="window.location.href='./demo.html'">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./asset/kilpauk.jpeg" alt="Fizz Kilpauk">
+        </div>
+        <div class="card-face card-back">
+          <div class="badge">Fizz - Kilpauk</div>
+          <h2>Creative Experience</h2>
+          <p>Engage audiences with visuals, video, and content that converts.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="scene">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./asset/tindivanam.jpeg" alt="Helios Tindivanam">
+        </div>
+        <div class="card-face card-back">
+          <div class="badge">Helios – Tindivanam</div>
+          <h2>Innovative Space</h2>
+          <p>Modern designs and impactful branding for digital visibility.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="scene">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./asset/salem.jpeg" alt="Aras Salem">
+        </div>
+        <div class="card-face card-back">
+          <div class="badge">Aras – Salem</div>
+          <h2>Smart Design</h2>
+          <p>Creative concepts built to enhance your brand presence.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="scene">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./asset/arcot.jpeg" alt="Franzo Arcot">
+        </div>
+        <div class="card-face card-back">
+          <div class="badge">Franzo – Arcot</div>
+          <h2>Modern Aesthetic</h2>
+          <p>Clean, vibrant visuals for every brand identity.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="scene">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./asset/Tooth & Smile.jpeg" alt="Tooth & Smile Pallavaram">
+        </div>
+        <div class="card-face card-back">
+          <div class="badge">Tooth & Smile - Pallavaram</div>
+          <h2>Perfect Smile</h2>
+          <p>Creative branding that shines bright and builds trust.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="scene">
+      <div class="card">
+        <div class="card-face card-front">
+          <img src="./asset/Hosur.jpeg" alt="Alam Hosur">
+        </div>
+        <div class="card-face card-back">
+          <div class="badge">Alam – Hosur</div>
+          <h2>Stylish Simplicity</h2>
+          <p>Elegant design meets powerful digital storytelling.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="container">
+    <div class="section-header">
+      <h2>Know about<br>our success stories</h2>
+      <p>From startups to established brands, our clients share how Social Spark helped them attract quality leads and boost their business growth with targeted digital strategies.</p>
+    </div>
+
+    <hr />
+
+    <div class="video-section">
+      <section class="testimonials">
+  <h2>What people says about us</h2>
+
+  <div class="cards">
+    <div class="card-1">
+      <img src="./asset/testivideo/1.png" alt="Nolan George">
+      <div class="info">
+        <h3>Prashanth</h3>
+        <p>MM ECO MOTORS</p>
+      </div>
+      <div class="play-btn" data-video="./asset/testivideo/Client Testimonial 1.mp4">&#9658;</div>
+    </div>
+
+    <div class="card-1">
+      <img src="./asset/testivideo/3.png" alt="Rayna Aminof">
+      <div class="info">
+        <h3>MoneesKumar</h3>
+        <p>KUMARAN MOTORS GROUP OF COMPANIES</p>
+      </div>
+      <div class="play-btn" data-video="./asset/testivideo/Client Testimonial 3.mp4">&#9658;</div>
+    </div>
+
+    <div class="card-1">
+      <img src="./asset/testivideo/2.png" alt="Robert Fox">
+      <div class="info">
+        <h3>Hema</h3>
+        <p>BGUASS SHOWROOM</p>
+      </div>
+      <div class="play-btn" data-video="./asset/testivideo/Client Testimonial 2.mp4">&#9658;</div>
+    </div>
+  </div>
+
+  <button class="view-btn">Write a Review...</button>
+</section>
+
+<!-- Video Popup -->
+<div class="video-popup" id="videoPopup">
+  <div class="video-container">
+    <span class="close">&times;</span>
+    <video controls id="popupVideo"></video>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+
+  <!-- footer start -->
+     <footer>
+    <div class="footer-top">
+      <div class="footer-left">
+        <h2>Let's work<br>together</h2>
+        <div class="social-icons">
+          <a href="#"><img src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" width="26px"></a>
+          <a href="#"><img src="https://img.icons8.com/?size=100&id=BrU2BBoRXiWq&format=png&color=000000" width="26px"></a>
+          <a href="#"><img src="https://img.icons8.com/?size=100&id=MR3dZdlA53te&format=png&color=000000" width="26px"></a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.9586520522244!2d80.24442227489531!3d13.101805987225674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265be61c1c5d3%3A0x11a6edc9e07b5f6!2sSocial%20spark%20-%20lead%20genration!5e0!3m2!1sen!2sin!4v1760289094446!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <img src="./asset/logo-bg.png" width="300px" style="object-fit: contain;">
+
+      <div class="footer-col">
+        <h4>ADDRESS</h4>
+        <p><img src="https://img.icons8.com/?size=100&id=LIMDyjN9eC3V&format=png&color=000000" width="16px">104 'A, 2nd St, neruji jothi nagar, Ekangi Puram,<br> Ayanavaram, Chennai, Tamil Nadu - 600023</p>
+      </div>
+      <div class="footer-col">
+        <h4>GET IN TOUCH</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+        <a style="display: flex; gap: 10px;
+        justify-content: start; align-items: center;"><img src="https://img.icons8.com/?size=100&id=hTTzWSpAOgIV&format=png&color=000000" width="15px" style=""> 9342520228</a>
+        <a style="display: flex; gap: 10px;
+        justify-content: start; align-items: center;"><img src="https://img.icons8.com/?size=100&id=MFd4aKzItnZK&format=png&color=000000" width="20px"> santhoshsandyit00135@gmail.com</a>
+        </div>
+
+      </div>
+      <div class="footer-col">
+        <h4>Other links</h4>
+        <a href="#" style="display: flex; justify-content: start;align-items: center; gap: 5px;"><img src="https://img.icons8.com/?size=100&id=39971&format=png&color=ffffff" width="16px"> Service</a><br>
+        <a href="#" style="display: flex; justify-content: start;align-items: center; gap: 5px;"><img src="https://img.icons8.com/?size=100&id=39971&format=png&color=ffffff" width="16px"> Our Works</a><br>
+        <a href="#" style="display: flex; justify-content: start;align-items: center; gap: 5px;"><img src="https://img.icons8.com/?size=100&id=39971&format=png&color=ffffff" width="16px"> Back To Top</a>
+      </div>
+    </div>
+
+    <p class="copyright">Copyright © Social Spark 2025. All Right Reserves</p>
+  </footer>
+
+  <!-- WhatsApp widget -->
+  <div class="whatsapp-widget" aria-live="polite">
+
+        <div id="wsLabel" class="ws-label" role="status">
+      <span class="ws-dot" aria-hidden="true"></span>
+      <span class="ws-text">Hai! There...</span>
+    </div>
+    <a
+      id="whatsappLink"
+      class="whatsapp-btn pulse"
+      href="https://wa.me/919999999999?text=Hello%20Social%20Spark%20!"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+      title="Chat on WhatsApp"
+    >
+      <!-- Inline WhatsApp SVG icon -->
+      <img src="https://img.icons8.com/?size=100&id=TRtiP3z8pXb0&format=png&color=ffffff" width="30px">
+    </a>
+  </div>
+
+  <script
+  src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
+  type="module"
+></script>
+
+  <!-- Popup Chat -->
+   <div class="popup-overlay" id="popupOverlay">
+<div class="popup">
+<button class="close-btn" onclick="closePopup()">×</button>
+<form>
+  <!-- <p class="pophead"></p> -->
+  <p class="pophead" style="color: #262626;">Turn clicks into clients-3X results with Social Spark ⚡</p> 
+<script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js" type="module"></script>
+<dotlottie-wc
+  src="https://lottie.host/60818b7c-a111-43f5-82a4-c2fb29fe8775/8G5ZDMp7tz.lottie"
+  style="width: 100%"
+  autoplay
+  loop
+></dotlottie-wc>
+<input type="text" placeholder="Your Name" required /><br>
+
+
+<input type="text" placeholder="your Mobile No" required /><br>
+
+
+<input type="email" placeholder="Your email Id (optional)" /><br>
+
+<label>Schedule Your Appointment in online</label><br>
+<input type="datetime-local" required />
+
+
+<button type="submit" class="submit-btn">Submit <img src="https://img.icons8.com/?size=100&id=39971&format=png&color=ffffff" width="15px"></button>
+</form>
+</div>
+</div>
+
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+
+  </script>
+<script>
+    let index = 0;
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(i) {
+      slides.forEach((slide, idx) => {
+        slide.classList.remove('active');
+        dots[idx].classList.remove('active');
+      });
+      slides[i].classList.add('active');
+      dots[i].classList.add('active');
+    }
+
+    function autoSlide() {
+      index++;
+      if (index >= slides.length) index = 0;
+      showSlide(index);
+    }
+
+    setInterval(autoSlide, 4000); // Auto change every 4 seconds
+  </script>
+
+  <!-- video testimonial -->
+   <script>
+   const playButtons = document.querySelectorAll('.play-btn');
+const videoPopup = document.getElementById('videoPopup');
+const popupVideo = document.getElementById('popupVideo');
+const closeBtn = document.querySelector('.close');
+
+playButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const videoSrc = btn.getAttribute('data-video');
+    popupVideo.src = videoSrc;
+    videoPopup.style.display = 'flex';
+    popupVideo.play();
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  videoPopup.style.display = 'none';
+  popupVideo.pause();
+  popupVideo.currentTime = 0;
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === videoPopup) {
+    videoPopup.style.display = 'none';
+    popupVideo.pause();
+  }
+});
+</script>
+
+
+  <script>
+    // CONFIG: change the phone number and default message below:
+    (function() {
+      const phone = "919999999999"; // e.g. "919876543210" (country code + number, no + or -)
+      const defaultMsg = "Hello Social Spark!"; // default message shown when user clicks
+      const link = document.getElementById('whatsappLink');
+      const encoded = encodeURIComponent(defaultMsg);
+      link.href = `https://wa.me/${phone}?text=${encoded}`;
+
+      const label = document.getElementById('wsLabel');
+      const btn = document.querySelector('.whatsapp-btn');
+
+      // Make label toggle every 4s: visible 4s, hidden 4s
+      let visible = false;
+      // initial slight delay then show
+      setTimeout(() => {
+        visible = true;
+        label.classList.add('visible');
+      }, 600);
+
+      // toggle every 4 seconds
+      setInterval(() => {
+        visible = !visible;
+        label.classList.toggle('visible', visible);
+      }, 4000);
+
+      // Optional: stop pulsing briefly when user hovers/touches - better UX on desktop/touch
+      ['pointerenter','focus'].forEach(ev => btn.addEventListener(ev, () => {
+        btn.classList.remove('pulse');
+        label.classList.add('visible'); // keep label visible while interacting
+      }));
+      ['pointerleave','blur'].forEach(ev => btn.addEventListener(ev, () => {
+        btn.classList.add('pulse');
+      }));
+
+      // On small screens allow tapping the label to open chat too
+      label.addEventListener('click', () => {
+        window.open(link.href, '_blank', 'noopener');
+      });
+
+      // Accessibility: announce when label becomes visible
+      const observer = new MutationObserver(() => {
+        if (label.classList.contains('visible')) {
+          label.setAttribute('aria-hidden', 'false');
+        } else {
+          label.setAttribute('aria-hidden', 'true');
+        }
+      });
+      observer.observe(label, { attributes: true, attributeFilter: ['class'] });
+    })();
+  </script>
+
+<script>
+  const texts = [
+    "82.7% Lower Cost Per Result",
+    "+200 to +300% Leads",
+    "5.8x More Effective",
+    "3x Better Conversion Rate",
+    "+433% More Sales"
+  ];
+
+  let k = 0;
+  const textElement = document.querySelector('.stats-text');
+
+  setInterval(() => {
+    // Start dice animation (rotate out)
+    textElement.classList.remove('show');
+    textElement.classList.add('fade');
+
+    // After transition, change text & show again
+    setTimeout(() => {
+      k = (k + 1) % texts.length;
+      textElement.textContent = texts[k];
+      textElement.classList.remove('fade');
+      textElement.classList.add('show');
+    }, 1000); // must match CSS transition time
+  }, 3000);
+</script>
+
+
+<script>
+// Show popup after 3 seconds
+setTimeout(() => {
+document.getElementById('popupOverlay').style.display = 'flex';
+}, 3000);
+
+
+// Auto-close after 13 seconds
+setTimeout(() => {
+document.getElementById('popupOverlay').style.display = 'none';
+}, 1600000000);
+
+
+function closePopup() {
+document.getElementById('popupOverlay').style.display = 'none';
+}
+</script>
+
+
+<script>
+// Small JS to support toggling the flip state via keyboard button
+const scene = document.querySelector('.scene');
+const card = document.querySelector('.card');
+const btn = document.getElementById('flipBtn');
+
+
+// Toggle when clicking the scene (useful on touch devices)
+scene.addEventListener('click', (e) => {
+// ignore clicks on the button
+if (e.target === btn) return;
+card.classList.toggle('is-flipped');
+updateAria();
+});
+
+
+// Toggle button
+btn.addEventListener('click', () => {
+card.classList.toggle('is-flipped');
+updateAria();
+});
+
+
+// keyboard: space/enter on the scene toggles flip
+scene.addEventListener('keydown', (e) => {
+if (e.key === ' ' || e.key === 'Enter'){
+e.preventDefault();
+card.classList.toggle('is-flipped');
+updateAria();
+}
+});
+
+
+function updateAria(){
+const pressed = card.classList.contains('is-flipped');
+card.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+}
+</script>
+
+</body>
+</html>

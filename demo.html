@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Spark</title>
+  <link rel="stylesheet" href="./asset/style/index.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo"><img src="./asset/logo-bg.png"></div>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="./index.html">Home</a>
+      <a href="#">About</a>
+      <a href="#">Service</a>
+      <a href="#">Project</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="menu-toggle" id="menu-toggle" onclick="dre()">
+      <img src="./asset/bar.png" width="40px" id="demo">
+    </div>
+  </header>
+  <script>
+    var d = document.getElementById('demo');
+    var y = 2;
+    function dre(){
+      if(y % 2 == 0){
+      d.src = 'https://img.icons8.com/?size=100&id=16248&format=png&color=ffffff';
+      }else{
+        d.src= './asset/bar.png';
+      }
+      y++;
+    }
+  </script>
+
+  <!-- HOME Section -->
+  <div class="sidebar">
+    <section>
+      <img src="./asset/logo.jpg">
+    </section>
+    <section>
+      <p class="sign">10X</p>
+      <p>Organic Traffic Boost for top business making Keywords in 4 Months</p>
+    </section>
+    <section>
+      <p class="sign">50+</p>
+      <p>Keywords: Achieving Top Rankings on Google Results</p>
+    </section>
+    <section>
+      <p class="sign">70%</p>
+      <p>Increase in Organic Enquiries in 4 Months</p>
+    </section>
+  </div>
+
+  <!-- home start -->
+  <section class="sub-home">
+    <div class="empty">
+    </div>
+    <div class="sum">
+      <h1>5.8× overall campaign efficiency growth</h1><br>
+      <!-- <p class="sum-head">Summary :</p> -->
+      <p>We reduced the lead cost from ₹150 → ₹26 (-82%) and delivered nearly 3× more leads for half the usual budget.That’s 5.8× overall campaign efficiency growth compared to the Chennai dental market standard.</p>
+      <div>
+      <section class="sub-home1">
+        <div>
+            <h2 class="cpl">CPL Comparison</h2>
+            <div class="chart-container">
+              <canvas id="cplChart"></canvas>
+            </div>
+        </div>
+        <div>
+            <h2 class="cpl">Leads Comparison</h2>
+            <div class="chart-container">
+              <canvas id="leadChart"></canvas>
+            </div>
+        </div>
+      </section>
+      <section class="sub-home1">
+        <div>
+            <h2 class="cpl">Total Spend</h2>
+            <div class="chart-container">
+              <canvas id="spendChart"></canvas>
+            </div>
+        </div>
+        <div>
+            <h2 class="cpl">Efficiency growth</h2>
+            <div class="chart-container">
+              <canvas id="efficiencyChart"></canvas>
+            </div>
+        </div>
+      </section>
+      <section class="sub-home1">
+        <div>
+            <h2 class="cpl">ROI on Ad Spend</h2>
+            <div class="chart-container1">
+              <p>We transformed an average ad performance into an exceptional ROI with strategic targeting, creative optimization, and data-driven insights.</p>
+            </div>
+        </div>
+      </section>
+      <section class="sub-home1">
+        <div>
+            <h2 class="cpl">🎯 Campaign Poster / Video</h2>
+            <div class="chart-container1">
+              <img src="./asset/testivideo/1.png" width="300px">
+            </div>
+        </div>
+      </section>
+      </div>
+    </div>
+  </section>
+  
+  <!-- <section class="sub-home1">
+    <div class="empty1">
+    </div>
+    <div>
+      <p class="sum-head">Cost Per Lead (CPL)</p>
+      <p></p>
+
+    </div>
+    <div>
+      <p class="sum-head">Cost Per Lead (CPL)</p>
+      <p></p>
+      <section>
+        <div>
+            <h2 class="cpl">Before & After CPL Comparison</h2>
+            <div class="chart-container">
+              <canvas id="cplChart"></canvas>
+            </div>
+        </div>
+        <div>
+
+        </div>
+      </section>
+
+    </div>
+  </section> -->
+
+  <!-- footer start -->
+     <footer>
+    <div class="footer-top">
+      <div class="footer-left">
+        <h2>Let's work<br>together</h2>
+        <div class="social-icons">
+          <a href="#"><img src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" width="26px"></a>
+          <a href="#"><img src="https://img.icons8.com/?size=100&id=BrU2BBoRXiWq&format=png&color=000000" width="26px"></a>
+          <a href="#"><img src="https://img.icons8.com/?size=100&id=MR3dZdlA53te&format=png&color=000000" width="26px"></a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.9586520522244!2d80.24442227489531!3d13.101805987225674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265be61c1c5d3%3A0x11a6edc9e07b5f6!2sSocial%20spark%20-%20lead%20genration!5e0!3m2!1sen!2sin!4v1760289094446!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <img src="./asset/logo-bg.png" width="300px" style="object-fit: contain;">
+
+      <div class="footer-col">
+        <h4>ADDRESS</h4>
+        <p><img src="https://img.icons8.com/?size=100&id=LIMDyjN9eC3V&format=png&color=000000" width="16px">104 'A, 2nd St, neruji jothi nagar, Ekangi Puram,<br> Ayanavaram, Chennai, Tamil Nadu - 600023</p>
+      </div>
+      <div class="footer-col">
+        <h4>GET IN TOUCH</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+        <a style="display: flex; gap: 10px;
+        justify-content: start; align-items: center;"><img src="https://img.icons8.com/?size=100&id=hTTzWSpAOgIV&format=png&color=000000" width="15px" style=""> 9342520228</a>
+        <a style="display: flex; gap: 10px;
+        justify-content: start; align-items: center;"><img src="https://img.icons8.com/?size=100&id=MFd4aKzItnZK&format=png&color=000000" width="20px"> santhoshsandyit00135@gmail.com</a>
+        </div>
+
+      </div>
+      <div class="footer-col">
+        <h4>Other links</h4>
+        <a href="#" style="display: flex; justify-content: start;align-items: center; gap: 5px;"><img src="https://img.icons8.com/?size=100&id=39971&format=png&color=ffffff" width="16px"> Service</a><br>
+        <a href="#" style="display: flex; justify-content: start;align-items: center; gap: 5px;"><img src="https://img.icons8.com/?size=100&id=39971&format=png&color=ffffff" width="16px"> Our Works</a><br>
+        <a href="#" style="display: flex; justify-content: start;align-items: center; gap: 5px;"><img src="https://img.icons8.com/?size=100&id=39971&format=png&color=ffffff" width="16px"> Back To Top</a>
+      </div>
+    </div>
+
+    <p class="copyright">Copyright © Social Spark 2025. All Right Reserves</p>
+  </footer>
+
+
+  <!-- WhatsApp widget -->
+  <div class="whatsapp-widget" aria-live="polite">
+
+        <div id="wsLabel" class="ws-label" role="status">
+      <span class="ws-dot" aria-hidden="true"></span>
+      <span class="ws-text">Get Your Free Consultation...!</span>
+    </div>
+    <a
+      id="whatsappLink"
+      class="whatsapp-btn pulse"
+      href="https://wa.me/919999999999?text=Hello%20Social%20Spark%20!"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+      title="Chat on WhatsApp"
+    >
+      <!-- Inline WhatsApp SVG icon -->
+      <img src="https://img.icons8.com/?size=100&id=YrXy82StfwT9&format=png&color=000000" width="70px">
+    </a>
+
+
+  </div>
+
+  <!-- cpl -->
+     <script>
+    const ctx = document.getElementById('cplChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Before Social Spark', 'After Social Spark'],
+        datasets: [{
+          label: 'Cost Per Lead (₹)',
+          data: [150, 26],
+          backgroundColor: ['#ff4d4d', '#4CAF50'],
+          borderRadius: 10
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'CPL Reduced from ₹150 → ₹26 (-82%)',
+            color: '#333',
+            font: { size: 16, weight: 'bold' }
+          },
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => `₹${ctx.parsed.y}`
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: { display: true, text: 'Cost (₹)' }
+          }
+        }
+      }
+    });
+
+
+
+
+    const ctx1 = document.getElementById('leadChart').getContext('2d');
+    new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels: ['Before Social Spark', 'After Social Spark'],
+        datasets: [{
+          label: 'Leads Generated (₹)',
+          data: [15, 60],
+          backgroundColor: ['#ff4d4d', '#4CAF50'],
+          borderRadius: 10
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: '+200% to 300% more leads',
+            color: '#333',
+            font: { size: 16, weight: 'bold' }
+          },
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => `₹${ctx.parsed.y}`
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: { display: true, text: 'Leads Count' }
+          }
+        }
+      }
+    });
+
+
+
+
+    const ctx2 = document.getElementById('spendChart').getContext('2d');
+    new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: ['Before Social Spark', 'After Social Spark'],
+        datasets: [{
+          label: 'Total Spend (₹)',
+          data: [3000, 1560],
+          backgroundColor: ['#ff4d4d', '#4CAF50'],
+          borderRadius: 10
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: '~48% less spend for 3× more leads',
+            color: '#333',
+            font: { size: 16, weight: 'bold' }
+          },
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => `₹${ctx.parsed.y}`
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: { display: true, text: 'Amount Spend' }
+          }
+        }
+      }
+    });
+
+
+
+
+    const ctx3= document.getElementById('efficiencyChart').getContext('2d');
+    new Chart(ctx3, {
+      type: 'bar',
+      data: {
+        labels: ['Before Social Spark', 'After Social Spark'],
+        datasets: [{
+          label: 'Efficiency',
+          data: [6.6, 38.4],
+          backgroundColor: ['#ff4d4d', '#4CAF50'],
+          borderRadius: 10
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: '~48% less spend for 3× more leads',
+            color: '#333',
+            font: { size: 16, weight: 'bold' }
+          },
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => `₹${ctx.parsed.y}`
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: { display: true, text: 'Efficiency Growth' }
+          }
+        }
+      }
+    });
+  </script>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+
+  </script>
+<script>
+    let index = 0;
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(i) {
+      slides.forEach((slide, idx) => {
+        slide.classList.remove('active');
+        dots[idx].classList.remove('active');
+      });
+      slides[i].classList.add('active');
+      dots[i].classList.add('active');
+    }
+
+    function autoSlide() {
+      index++;
+      if (index >= slides.length) index = 0;
+      showSlide(index);
+    }
+
+    setInterval(autoSlide, 4000); // Auto change every 4 seconds
+  </script>
+
+  <!-- video testimonial -->
+   <script>
+   const playButtons = document.querySelectorAll('.play-btn');
+const videoPopup = document.getElementById('videoPopup');
+const popupVideo = document.getElementById('popupVideo');
+const closeBtn = document.querySelector('.close');
+
+playButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const videoSrc = btn.getAttribute('data-video');
+    popupVideo.src = videoSrc;
+    videoPopup.style.display = 'flex';
+    popupVideo.play();
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  videoPopup.style.display = 'none';
+  popupVideo.pause();
+  popupVideo.currentTime = 0;
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === videoPopup) {
+    videoPopup.style.display = 'none';
+    popupVideo.pause();
+  }
+});
+</script>
+
+
+  <script>
+    // CONFIG: change the phone number and default message below:
+    (function() {
+      const phone = "919999999999"; // e.g. "919876543210" (country code + number, no + or -)
+      const defaultMsg = "Hello Social Spark!"; // default message shown when user clicks
+      const link = document.getElementById('whatsappLink');
+      const encoded = encodeURIComponent(defaultMsg);
+      link.href = `https://wa.me/${phone}?text=${encoded}`;
+
+      const label = document.getElementById('wsLabel');
+      const btn = document.querySelector('.whatsapp-btn');
+
+      // Make label toggle every 4s: visible 4s, hidden 4s
+      let visible = false;
+      // initial slight delay then show
+      setTimeout(() => {
+        visible = true;
+        label.classList.add('visible');
+      }, 600);
+
+      // toggle every 4 seconds
+      setInterval(() => {
+        visible = !visible;
+        label.classList.toggle('visible', visible);
+      }, 4000);
+
+      // Optional: stop pulsing briefly when user hovers/touches - better UX on desktop/touch
+      ['pointerenter','focus'].forEach(ev => btn.addEventListener(ev, () => {
+        btn.classList.remove('pulse');
+        label.classList.add('visible'); // keep label visible while interacting
+      }));
+      ['pointerleave','blur'].forEach(ev => btn.addEventListener(ev, () => {
+        btn.classList.add('pulse');
+      }));
+
+      // On small screens allow tapping the label to open chat too
+      label.addEventListener('click', () => {
+        window.open(link.href, '_blank', 'noopener');
+      });
+
+      // Accessibility: announce when label becomes visible
+      const observer = new MutationObserver(() => {
+        if (label.classList.contains('visible')) {
+          label.setAttribute('aria-hidden', 'false');
+        } else {
+          label.setAttribute('aria-hidden', 'true');
+        }
+      });
+      observer.observe(label, { attributes: true, attributeFilter: ['class'] });
+    })();
+  </script>
+
+
+
+<script>
+// Show popup after 3 seconds
+setTimeout(() => {
+document.getElementById('popupOverlay').style.display = 'flex';
+}, 3000);
+
+
+// Auto-close after 13 seconds
+setTimeout(() => {
+document.getElementById('popupOverlay').style.display = 'none';
+}, 1600000000);
+
+
+function closePopup() {
+document.getElementById('popupOverlay').style.display = 'none';
+}
+</script>
+
+
+<script>
+// Small JS to support toggling the flip state via keyboard button
+const scene = document.querySelector('.scene');
+const card = document.querySelector('.card');
+const btn = document.getElementById('flipBtn');
+
+
+// Toggle when clicking the scene (useful on touch devices)
+scene.addEventListener('click', (e) => {
+// ignore clicks on the button
+if (e.target === btn) return;
+card.classList.toggle('is-flipped');
+updateAria();
+});
+
+
+// Toggle button
+btn.addEventListener('click', () => {
+card.classList.toggle('is-flipped');
+updateAria();
+});
+
+
+// keyboard: space/enter on the scene toggles flip
+scene.addEventListener('keydown', (e) => {
+if (e.key === ' ' || e.key === 'Enter'){
+e.preventDefault();
+card.classList.toggle('is-flipped');
+updateAria();
+}
+});
+
+
+function updateAria(){
+const pressed = card.classList.contains('is-flipped');
+card.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+}
+</script>
+
+</body>
+</html>
